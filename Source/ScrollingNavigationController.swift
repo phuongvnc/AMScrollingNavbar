@@ -421,7 +421,7 @@ open class ScrollingNavigationController: UINavigationController, UIGestureRecog
     updateNavbarAlpha()
     restoreContentOffset(scrollDelta)
     updateFollowers(scrollDelta)
-    updateContentInset(scrollDelta)
+    updateContentInset(0)
   }
 
   /// Adjust the top inset (useful when a table view has floating headers, see issue #219
@@ -504,7 +504,7 @@ open class ScrollingNavigationController: UINavigationController, UIGestureRecog
       self.updateSizing(delta)
       self.updateFollowers(delta)
       self.updateNavbarAlpha()
-      self.updateContentInset(delta)
+      self.updateContentInset(0)
     }, completion: nil)
   }
 
